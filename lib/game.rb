@@ -11,17 +11,18 @@ class Game
       end
     end
     @deck.shuffle!
-    player1_starting_hand = []
-    player2_starting_hand = []
+    player1_hand = []
+    player2_hand = []
     7.times do
-      player1_starting_hand << @deck.pop
-      player2_starting_hand << @deck.pop
+      player1_hand << @deck.pop
+      player2_hand << @deck.pop
     end
-    @player1 = Player.new(player1_name, player1_starting_hand)
-    @player2 = Player.new(player2_name, player2_starting_hand)
+    @player1 = Player.new(player1_name, player1_hand)
+    @player2 = Player.new(player2_name, player2_hand)
     @turn = 0
 
   end
+
 end
 
 
